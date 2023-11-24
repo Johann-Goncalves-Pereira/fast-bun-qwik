@@ -1,0 +1,30 @@
+@use "/.theme" as *;
+
+$font-size-height: map-get($theme, font_size);
+$font-weight: map-get($theme, font_weight);
+$border-radius: map-get($theme, border_radius);
+$letter-spacing: map-get($theme, letter_spacing);
+
+$font-size: map-get($font-size-height, size);
+$line-height: map-get($font-size-height, height);
+
+@function removeDEFAULT($name) {
+  @if ($name == "DEFAULT") {
+    @return "";
+  }
+  @return -#{$name};
+}
+@mixin size-from-list($name, $list) {
+  @each $t, $value in $list {
+    $type: removeDEFAULT($t);
+    --#{$name}#{$type}: #{$value};
+  }
+}
+
+:root {
+  @include size-from-list("text", $font-size);
+  @include size-from-list("weight", $font-weight);
+  @include size-from-list("landing", $line-height);
+  @include size-from-list("rounded", $border-radius);
+  @include size-from-list("tracking", $letter-spacing);
+}
