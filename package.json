@@ -26,6 +26,7 @@
   "devDependencies": {
     "@builder.io/qwik": "^1.1.4",
     "@builder.io/qwik-city": "^1.1.4",
+    "@total-typescript/ts-reset": "^0.5.1",
     "@types/eslint": "8.37.0",
     "@types/node": "^20.1.4",
     "@types/prettier": "^3.0.0",
@@ -42,10 +43,11 @@
     "postcss-inline-svg": "^6.0.0",
     "postcss-nesting": "^12.0.1",
     "postcss-preset-env": "^9.3.0",
+    "postcss-vwh": "^1.0.0",
     "prettier": "2.8.8",
     "sass": "^1.69.5",
     "tailwindcss": "^3.3.5",
-    "typescript": "5.0.4",
+    "typescript": "latest",
     "undici": "5.22.1",
     "vite": "4.3.5",
     "vite-tsconfig-paths": "4.2.0"
