@@ -2,9 +2,9 @@ import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
 
 import postcssCustomMedia from "postcss-custom-media";
-import postcssCustomProperties from "postcss-custom-properties";
 import postcssInlineSvg from "postcss-inline-svg";
 import postcssPresetEnv from "postcss-preset-env";
+import postcssVwh from "postcss-vwh";
 
 import tailwind from "tailwindcss";
 import tailwindConfig from "./tailwind.config.js";
@@ -23,7 +23,6 @@ export default {
       ],
     }),
     postcssCustomMedia,
-    postcssCustomProperties,
     postcssInlineSvg,
     postcssPresetEnv({
       precalculate: false,
@@ -31,6 +30,7 @@ export default {
         "logical-properties-and-values": false,
       },
     }),
+    postcssVwh,
     tailwind(tailwindConfig),
     tailwindNesting,
   ],
