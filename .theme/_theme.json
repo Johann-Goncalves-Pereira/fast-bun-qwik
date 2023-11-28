@@ -98,35 +98,58 @@
     ]
   },
   "font_size": {
-    "xs": { "size": "0.75rem", "height": "1rem" },
-    "sm": { "size": "0.875rem", "height": "1.25rem" },
-    "base": { "size": "1rem", "height": "1.5rem" },
-    "lg": { "size": "1.125rem", "height": "1.75rem" },
-    "xl": { "size": "1.25rem", "height": "1.75rem" },
-    "2xl": { "size": "1.5rem", "height": "2rem" },
-    "3xl": { "size": "1.875rem", "height": "2.25rem" },
-    "4xl": { "size": "2.25rem", "height": "2.5rem" },
-    "5xl": { "size": "3rem", "height": "1" },
-    "6xl": { "size": "3.75rem", "height": "1" },
-    "7xl": { "size": "4.5rem", "height": "1" },
-    "8xl": { "size": "6rem", "height": "1" },
-    "9xl": { "size": "8rem", "height": "1" }
-  },
-  "line_height": {
-    "none": "1",
-    "tight": "1.25",
-    "snug": "1.375",
-    "normal": "1.5",
-    "relaxed": "1.625",
-    "loose": "2",
-    "3": ".75rem",
-    "4": "1rem",
-    "5": "1.25rem",
-    "6": "1.5rem",
-    "7": "1.75rem",
-    "8": "2rem",
-    "9": "2.25rem",
-    "10": "2.5rem"
+    "xs": {
+      "size": "clamp(0.3563rem, 0.3021rem + 0.2707vw, 0.5119rem)",
+      "height": "calc(2ex + 0.125rem)"
+    },
+    "sm": {
+      "size": "clamp(0.475rem, 0.4176rem + 0.287vw, 0.64rem)",
+      "height": "calc(2ex + 0.125rem)"
+    },
+    "DEFAULT": {
+      "size": "clamp(0.6331rem, 0.5751rem + 0.2902vw, 0.8rem)",
+      "height": "calc(2ex + 0.125rem)"
+    },
+    "lg": {
+      "size": "clamp(0.8438rem, 0.7894rem + 0.2717vw, 1rem)",
+      "height": "calc(2ex + 0.125rem)"
+    },
+    "xl": {
+      "size": "clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem)",
+      "height": "calc(2ex + 0.25rem)"
+    },
+    "2xl": {
+      "size": "clamp(1.4994rem, 1.4774rem + 0.1098vw, 1.5625rem)",
+      "height": "calc(2ex + 0.25rem)"
+    },
+    "3xl": {
+      "size": "clamp(1.9531rem, 2.0146rem - 0.0793vw, 1.9988rem)",
+      "height": "calc(2ex + 0.25rem)"
+    },
+    "4xl": {
+      "size": "clamp(2.4413rem, 2.742rem - 0.388vw, 2.6644rem)",
+      "height": "calc(2ex + 0.25rem)"
+    },
+    "5xl": {
+      "size": "clamp(3.0519rem, 3.7258rem - 0.8696vw, 3.5519rem)",
+      "height": "calc(2ex + 0.5rem)"
+    },
+    "6xl": {
+      "size": "clamp(3.815rem, 5.055rem - 1.6vw, 4.735rem)",
+      "height": "calc(2ex + 0.5rem)"
+    },
+    "7xl": {
+      "size": "clamp(4.7681rem, 6.848rem - 2.6837vw, 6.3113rem)",
+      "height": "calc(2ex + 0.5rem)"
+    },
+    "8xl": {
+      "size": "clamp(5.9606rem, 9.2662rem - 4.2652vw, 8.4131rem)",
+      "height": "calc(2ex + 0.75rem)"
+    },
+    "9xl": {
+      "size": "clamp(7.4506rem, 12.5243rem - 6.5467vw, 11.215rem)",
+      "height": "calc(2ex + 0.75rem)"
+    }
   },
   "font_weight": {
     "1": "100",
@@ -163,55 +186,44 @@
     "2uxl": "2560px",
     "3uxl": "3200px"
   },
-  "spacing": {
-    "px": "1px",
-    "0": "0px",
-    "0.5": "0.125rem",
-    "1": "0.25rem",
-    "1.5": "0.375rem",
-    "2": "0.5rem",
-    "2.5": "0.625rem",
-    "3": "0.75rem",
-    "3.5": "0.875rem",
-    "4": "1rem",
-    "5": "1.25rem",
-    "6": "1.5rem",
-    "7": "1.75rem",
-    "8": "2rem",
-    "9": "2.25rem",
-    "10": "2.5rem",
-    "11": "2.75rem",
-    "12": "3rem",
-    "14": "3.5rem",
-    "16": "4rem",
-    "20": "5rem",
-    "24": "6rem",
-    "28": "7rem",
-    "32": "8rem",
-    "36": "9rem",
-    "40": "10rem",
-    "44": "11rem",
-    "48": "12rem",
-    "52": "13rem",
-    "56": "14rem",
-    "60": "15rem",
-    "64": "16rem",
-    "72": "18rem",
-    "80": "20rem",
-    "96": "24rem"
+  "space": {
+    "a01": "clamp(0.0625rem, 0.0625rem + 0vw, 0.0625rem)",
+    "a02": "clamp(0.125rem, 0.1033rem + 0.1087vw, 0.1875rem)",
+    "a03": "clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem)",
+    "a04": "clamp(0.5625rem, 0.5408rem + 0.1087vw, 0.625rem)",
+    "a05": "clamp(0.875rem, 0.8533rem + 0.1087vw, 0.9375rem)",
+    "a06": "clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem)",
+    "a07": "clamp(1.6875rem, 1.6223rem + 0.3261vw, 1.875rem)",
+    "a08": "clamp(2.25rem, 2.163rem + 0.4348vw, 2.5rem)",
+    "a09": "clamp(2.8125rem, 2.7038rem + 0.5435vw, 3.125rem)",
+    "a10": "clamp(4.5rem, 4.3261rem + 0.8696vw, 5rem)",
+    "a11": "clamp(5.625rem, 5.4076rem + 1.087vw, 6.25rem)",
+    "a12": "clamp(6.75rem, 6.4891rem + 1.3043vw, 7.5rem)",
+    "a13": "clamp(7.875rem, 7.5707rem + 1.5217vw, 8.75rem)",
+    "a14": "clamp(9rem, 8.6522rem + 1.7391vw, 10rem)",
+
+    "b01-02": "clamp(0.0625rem, 0.019rem + 0.2174vw, 0.1875rem)",
+    "b02-03": "clamp(0.125rem, 0.0598rem + 0.3261vw, 0.3125rem)",
+    "b03-04": "clamp(0.3125rem, 0.2038rem + 0.5435vw, 0.625rem)",
+    "b04-05": "clamp(0.5625rem, 0.4321rem + 0.6522vw, 0.9375rem)",
+    "b05-06": "clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem)",
+    "b06-07": "clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem)",
+    "b07-08": "clamp(1.6875rem, 1.4049rem + 1.413vw, 2.5rem)",
+    "b08-09": "clamp(2.25rem, 1.9457rem + 1.5217vw, 3.125rem)",
+    "b09-10": "clamp(2.8125rem, 2.0516rem + 3.8043vw, 5rem)",
+    "b10-11": "clamp(4.5rem, 3.8913rem + 3.0435vw, 6.25rem)",
+    "b11-12": "clamp(5.625rem, 4.9728rem + 3.2609vw, 7.5rem)",
+    "b12-13": "clamp(6.75rem, 6.0543rem + 3.4783vw, 8.75rem)",
+    "b13-14": "clamp(7.875rem, 7.1359rem + 3.6957vw, 10rem)"
   },
   "z_index": {
     "auto": "auto",
-    "-50": -50,
-    "-40": -40,
-    "-30": -30,
-    "-20": -20,
-    "-10": -10,
-    "0": 0,
-    "10": 10,
-    "20": 20,
-    "30": 30,
-    "40": 40,
-    "50": 50
+    "negative-2": -30,
+    "negative-1": -20,
+    "negative-0": -10,
+    "DEFAULT": 0,
+    "positive-0": 10,
+    "positive-1": 20,
+    "positive-2": 30
   }
 }

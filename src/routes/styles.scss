@@ -1,0 +1,72 @@
+@use "/.theme" as *;
+
+.xs {
+  font-size: var(--text-xs);
+  line-height: var(--landing-xs);
+  background-color: red;
+}
+.sm {
+  font-size: var(--text-sm);
+  line-height: var(--landing-sm);
+}
+
+.default {
+  font-size: var(--text);
+  line-height: var(--landing);
+  background-color: red;
+}
+
+.lg {
+  font-size: var(--text-lg);
+  line-height: var(--landing-lg);
+  background-color: red;
+}
+
+.xl {
+  font-size: var(--text-xl);
+  line-height: var(--landing-xl);
+}
+
+.xxl {
+  font-size: var(--text-2xl);
+  line-height: var(--landing-2xl);
+  background-color: red;
+}
+// 3
+.xxxl {
+  font-size: var(--text-3xl);
+  line-height: var(--landing-3xl);
+}
+// 4
+.xxxxl {
+  font-size: var(--text-4xl);
+  line-height: var(--landing-4xl);
+  background-color: red;
+}
+// 5
+.xxxxxl {
+  font-size: var(--text-5xl);
+  line-height: var(--landing-5xl);
+}
+// 6
+.xxxxxxl {
+  font-size: var(--text-6xl);
+  line-height: var(--landing-6xl);
+  background-color: red;
+}
+// 7
+.xxxxxxxl {
+  font-size: var(--text-7xl);
+  line-height: var(--landing-7xl);
+}
+
+.xxxxxxxxl {
+  font-size: var(--text-8xl);
+  line-height: var(--landing-8xl);
+  background-color: red;
+}
+
+.\xxxxxxxxl {
+  font-size: var(--text-9xl);
+  line-height: var(--landing-9xl);
+}

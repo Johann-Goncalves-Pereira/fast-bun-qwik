@@ -5,6 +5,9 @@ $dark-colors: map-get($theme, colors);
 $light-colors: map-get($theme, light_colors);
 
 @function hsl-str($color) {
+  // @return unquote(
+  //   "hsl(#{hue($color)}, #{saturation($color)}, #{lightness($color)})"
+  // );
   @return unquote(
     "#{hue($color)}, #{saturation($color)}, #{lightness($color)}"
   );
@@ -16,23 +19,3 @@ $light-colors: map-get($theme, light_colors);
     }
   }
 }
-
-@media (--schema-dark) {
-  :root {
-    /* Dark colors */
-    @include create-custom-prop($dark-colors);
-  }
-}
-// .root--dark {
-// 	@include create-custom-prop($dark-colors);
-// }
-
-@media (--schema-light) {
-  :root {
-    /* Light colors */
-    @include create-custom-prop($light-colors);
-  }
-}
-// .root--light {
-// 	@include create-custom-prop($light-colors);
-// }

@@ -1,5 +1,38 @@
 @forward "size";
 @forward "color";
 @forward "media";
-@forward "spacing";
 @forward "layers";
+
+@use "/.theme" as *;
+@use "size" as *;
+@use "color" as *;
+
+$z-index: map-get($theme, z_index);
+$spacing: map-get($theme, space);
+
+:root {
+  // & Size
+  @include size-from-list("weight", $font-weight);
+  @include size-from-list("rounded", $border-radius);
+  @include size-from-list("tracking", $letter-spacing);
+  @include font-size-and-height();
+
+  // & Colors
+  @media (--schema-light) {
+    @include create-custom-prop($light-colors);
+  }
+  @include create-custom-prop($dark-colors);
+
+  // & Spacing
+  @each $spacing-type, $size in $spacing {
+    $layer-type: str-replace("#{$spacing-type}", ".5", "\\.5");
+    --space-#{$layer-type}: #{$size};
+  }
+
+  // & Layers
+  @each $layer-type, $size in $z-index {
+    $layer: remove-default($layer-type);
+
+    --layer#{$layer}: #{$size};
+  }
+}

@@ -1,4 +1,4 @@
-$color-var: "--clr";
+$color-var: "--color";
 $empty: "empty";
 
 @function var($value, $parameter: $empty) {
@@ -13,7 +13,7 @@ $empty: "empty";
     @return unquote("hsl(var(#{$value}))");
   }
   @if $var-color and $parameter-populated {
-    @return unquote("hsl(var(#{$value}) / #{$parameter})");
+    @return unquote("hsl(var(#{$value}), #{$parameter})");
   }
   @if $var-prop and $parameter-empty {
     @return unquote("var(#{$value})");
