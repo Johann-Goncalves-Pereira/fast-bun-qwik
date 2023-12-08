@@ -13,31 +13,35 @@ html {
 }
 
 body {
-  padding: var(--space-1);
+  padding: var(--space-a03);
   border-radius: var(--rounded);
 
-  background-color: var(--clr-surface-100);
+  background-color: var(--color-surface-100);
+  color: var(--color-surface-900);
 
   // overflow: hidden;
 
   &::before {
     content: "";
     position: fixed;
-    inset: var(--space-1);
+    inset: var(--space-a03);
     border-radius: var(--rounded);
-    background-color: var(--clr-surface-200, 0.99);
+    background-color: var(--color-surface-200, 0.99);
     // backdrop-filter: blur(5rem);
     z-index: var(--layer-negative-1);
   }
   &::after {
     content: "";
     position: fixed;
-    inset: var(--space-0);
+    inset: -20vmax;
 
+    border-radius: var(--rounded-full);
+
+    filter: blur(10rem);
     background-image: linear-gradient(
       0deg,
       transparent 10%,
-      var(--clr-surface-700, 0.75) 50%,
+      var(--color-surface-700, 0.75) 50%,
       transparent 90%
     );
 
@@ -48,9 +52,9 @@ body {
 
 @keyframes infinite-spinning {
   0% {
-    transform: scaleX(2) rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: scaleX(2) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
