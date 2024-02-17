@@ -16,7 +16,9 @@ export default component$(() => {
           src="favicon.svg"
           loading="lazy"
         />
-        <strong class="font-6 text-ellipsis">Johann Gonçalves Pereira</strong>
+        <strong class="font-6 text-ellipsis overflow-hidden whitespace-nowrap text-x">
+          Johann Gonçalves Pereira
+        </strong>
         <p class="">+3 years of experience</p>
       </aside>
 
